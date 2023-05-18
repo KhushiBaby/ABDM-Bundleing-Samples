@@ -1,0 +1,375 @@
+{
+  "id": "person-name-pregnancy",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-07-09T15:32:26.605+05:30",
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ],
+    "security": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "V",
+        "display": "very restricted"
+      }
+    ]
+  },
+  "type": "document",
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "fullUrl": "Composition/1",
+      "resource": {
+        "id": "1",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Composition"
+          ]
+        },
+        "resourceType": "Composition",
+        "status": "final",
+        "date": "2023-04-26T18:00:00.123+05:30",
+        "author": [
+          {
+            "reference": "Practitioner/1",
+            "display": "dr.mo or anm"
+          }
+        ],
+        "title": "ANC Report",
+        "custodian": {
+          "reference": "Organization/1",
+          "display": "KhushiBaby"
+        },
+        "section": [
+          {
+            "title": "Pregnancy",
+            "code": {
+              "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "72892002",
+                    "display": "Normal Pregnancy"
+                  }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Condition/1"
+              }
+            ]
+          },
+          {
+            "title": "Pregnancy Outcome",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "177184002",
+                  "display": "Normal delivery procedure"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Procedure/1"
+              }
+            ]
+          },
+          {
+            "title": "ANC Care",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "424525001",
+                  "display": "Antenatal care"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Appointment/1"
+              }
+            ]
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "371530004",
+              "display": "Clinical consultation report"
+            }
+          ],
+          "text": "Clinical Consultation report"
+        }
+      }
+    },
+    {
+      "fullUrl": "Practitioner/1",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "1",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-04-26T11:39:54.121+05:30",
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Practitioner"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "https://terminology.hl7.org/5.1.0/CodeSystem-v2-0203.html",
+                  "code": "MD",
+                  "display": "Medical License number"
+                }
+              ]
+            },
+            "system": "https://doctor.ndhm.gov.in",
+            "value": "21-1521-3828-3227"
+          }
+        ],
+        "name": [
+          {
+            "text": "Leela Kunwar",
+            "use": "official",
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Patient/1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-04-26T11:39:54.121+05:30",
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical record number"
+                }
+              ]
+            },
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "22-7225-4829-5255"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-IN\" lang=\"en-IN\">ABC, 41 year, Male</div>"
+        },
+        "gender": "male",
+        "birthDate": "2000-03-29",
+        "deceasedBoolean": false,
+        "telecom": [
+          {
+            "use": "mobile",
+            "system": "phone",
+            "value": "9876543210"
+          },
+          {
+            "use": "mobile",
+            "system": "email",
+            "value": "jagad@khushibaby.org"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Organization/1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "1",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN",
+                  "display": "Provider number"
+                }
+              ]
+            }
+          }
+        ],
+        "name": "KhushiBaby",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+91 243 2634 1234",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "contact@labs.xyz.org",
+            "use": "work"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Appointment/1",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "1",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Appointment"
+          ]
+        },
+        "participant": [
+          {
+            "actor": {
+              "reference": "Patient/1"
+            },
+            "status": "accepted"
+          },
+          {
+            "actor": {
+              "reference": "Practitioner/1"
+            },
+            "status": "accepted"
+          }
+        ],
+        "status": "checked-in",
+        "serviceCategory": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "406224006",
+                "display": "Reproductive Care"
+              }
+            ]
+          }
+        ],
+        "serviceType": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "424525001",
+                "display": "Antenatal Care"
+              }
+            ]
+          }
+        ],
+        "appointmentType": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "308335008",
+              "display": "Patient encounter procedure"
+            }
+          ]
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/1"
+          }
+        ],
+        "description": "ANC 1",
+        "start": "2023-04-11T14:23:54.123+05:30",
+        "end": "2023-04-11T14:23:54.123+05:30",
+        "created": "2023-04-11T14:23:54.123+05:30"
+      }
+    },
+    {
+      "fullUrl": "Condition/1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition"
+          ]
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "resolved",
+              "display": "Resolved"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "72892002",
+              "display": "Normal Pregnancy"
+            }
+          ],
+          "text": "Pregnancy"
+        }
+      }
+    },
+    {
+      "fullUrl": "Procedure/1",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "1",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Procedure"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Normal Delivery</div>"
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "177184002",
+              "display": "Normal delivery procedure"
+            }
+          ]
+        },
+        "performedDateTime": "2019-05-12",
+        "reasonReference": [
+          {
+            "reference": "Condition/1"
+          }
+        ],
+        "complication": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "34842007",
+                "display": "APH"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

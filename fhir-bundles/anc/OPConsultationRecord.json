@@ -28,23 +28,6 @@
         "resourceType": "Composition",
         "section": [
           {
-            "title": "ANC Care",
-            "code": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "424525001",
-                  "display": "Antenatal care"
-                }
-              ]
-            },
-            "entry": [
-              {
-                "reference": "Appointment/1"
-              }
-            ]
-          },
-          {
             "title": "Medical History",
             "code": {
               "coding": [
@@ -83,23 +66,6 @@
               },
               {
                 "reference": "MedicationRequest/2"
-              }
-            ]
-          },
-          {
-            "title": "Pregnancy Outcome",
-            "code": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "177184002",
-                  "display": "Normal delivery procedure"
-                }
-              ]
-            },
-            "entry": [
-              {
-                "reference": "Procedure/1"
               }
             ]
           }
@@ -253,73 +219,6 @@
             "use": "work"
           }
         ]
-      }
-    },
-    {
-      "fullUrl": "Appointment/1",
-      "resource": {
-        "resourceType": "Appointment",
-        "id": "1",
-        "meta": {
-          "profile": [
-            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Appointment"
-          ]
-        },
-        "participant": [
-          {
-            "actor": {
-              "reference": "Patient/1"
-            },
-            "status": "accepted"
-          },
-          {
-            "actor": {
-              "reference": "Practitioner/1"
-            },
-            "status": "accepted"
-          }
-        ],
-        "status": "checked-in",
-        "serviceCategory": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "406224006",
-                "display": "Reproductive Care"
-              }
-            ]
-          }
-        ],
-        "serviceType": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "424525001",
-                "display": "Antenatal Care"
-              }
-            ]
-          }
-        ],
-        "appointmentType": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "308335008",
-              "display": "Patient encounter procedure"
-            }
-          ]
-        },
-        "reasonReference": [
-          {
-            "reference": "Condition/1"
-          }
-        ],
-        "description": "ANC 1",
-        "start": "2023-04-11T14:23:54.123+05:30",
-        "end": "2023-04-11T14:23:54.123+05:30",
-        "created": "2023-04-11T14:23:54.123+05:30"
       }
     },
     {
@@ -567,52 +466,6 @@
                 }
               ]
             }
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "Procedure/1",
-      "resource": {
-        "resourceType": "Procedure",
-        "id": "1",
-        "meta": {
-          "profile": [
-            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Procedure"
-          ]
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Normal Delivery</div>"
-        },
-        "subject": {
-          "reference": "Patient/1"
-        },
-        "status": "completed",
-        "code": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "177184002",
-              "display": "Normal delivery procedure"
-            }
-          ]
-        },
-        "performedDateTime": "2019-05-12",
-        "reasonReference": [
-          {
-            "reference": "Condition/1"
-          }
-        ],
-        "complication": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "34842007",
-                "display": "APH"
-              }
-            ]
           }
         ]
       }
