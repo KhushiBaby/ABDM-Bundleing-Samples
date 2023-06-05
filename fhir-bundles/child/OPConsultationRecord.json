@@ -235,68 +235,6 @@
       }
     },
     {
-      "fullUrl": "Appointment/1",
-      "resource": {
-        "resourceType": "Appointment",
-        "id": "1",
-        "meta": {
-          "profile": [
-            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Appointment"
-          ]
-        },
-        "participant": [
-          {
-            "actor": {
-              "reference": "Patient/1"
-            },
-            "status": "accepted"
-          },
-          {
-            "actor": {
-              "reference": "Practitioner/1"
-            },
-            "status": "accepted"
-          }
-        ],
-        "status": "checked-in",
-        "serviceCategory": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "228114008",
-                "display": "Reproductive Care"
-              }
-            ]
-          }
-        ],
-        "serviceType": [
-          {
-            "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "code": "268481000",
-                "display": "Child health care"
-              }
-            ]
-          }
-        ],
-        "appointmentType": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "308335008",
-              "display": "Patient encounter procedure"
-            }
-          ]
-        },
-        "description": "ANC 1",
-        "start": "2023-04-11T14:23:54.123+05:30",
-        "end": "2023-04-11T14:23:54.123+05:30",
-        "created": "2023-04-11T14:23:54.123+05:30"
-      }
-    },
-    {
       "fullUrl": "Encounter/1",
       "resource": {
         "resourceType": "Encounter",

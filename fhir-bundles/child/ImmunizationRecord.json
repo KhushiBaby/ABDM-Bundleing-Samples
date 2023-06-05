@@ -264,7 +264,6 @@
               }
             ],
             "description": "National Immunization Schedule for children",
-            "series": "Vaccination Series 2",
             "doseNumberPositiveInt": 1,
             "seriesDosesPositiveInt": 1,
             "supportingImmunization": [

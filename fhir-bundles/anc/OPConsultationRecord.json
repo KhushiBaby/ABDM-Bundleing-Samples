@@ -40,6 +40,9 @@
             },
             "entry": [
               {
+                "reference": "Condition/1"
+              },
+              {
                 "reference": "Condition/2"
               }
             ]
@@ -157,7 +160,7 @@
             "type": {
               "coding": [
                 {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "system": "https://terminology.hl7.org/5.1.0/CodeSystem-v2-0203.html",
                   "code": "MR",
                   "display": "Medical record number"
                 }
@@ -171,6 +174,12 @@
           "status": "generated",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-IN\" lang=\"en-IN\">ABC, 41 year, Male</div>"
         },
+        "name": [
+          {
+            "text": "female name",
+            "use": "official"
+          }
+        ],
         "gender": "male",
         "birthDate": "2000-03-29",
         "deceasedBoolean": false,
@@ -233,7 +242,7 @@
         },
         "identifier": [
           {
-            "system": "khushibaby.org",
+            "system": "https://khushibaby.org",
             "value": "ANC"
           }
         ],

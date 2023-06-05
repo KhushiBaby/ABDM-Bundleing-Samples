@@ -325,8 +325,7 @@
               "code": "56072-2",
               "display": "Circumference Mid upper arm - right"
             }
-          ],
-          "text": "pregnancy vital signs"
+          ]
         },
         "subject": {
           "reference": "Patient/1"
