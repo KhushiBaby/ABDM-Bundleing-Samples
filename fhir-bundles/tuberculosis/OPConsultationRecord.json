@@ -32,7 +32,9 @@
             "code": {
               "coding": [
                 {
-                  lakdsfj
+                  "system": "http://snomed.info/sct",
+                  "code": "56717001",
+                  "display": "Tuberculosis"
                 }
               ]
             },
@@ -43,18 +45,48 @@
             ]
           },
           {
-            "title": "Alcohol/Tobacco Observations",
+            "title": "TB screening",
             "code": {
               "coding": [
-
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "171126009",
+                  "display": "Tuberculosis screening"
+                }
               ]
             },
             "entry": [
+              {
+                "reference": "Condition/2"
+              },
+              {
+                "reference": "Condition/4"
+              },
               {
                 "reference": "Observation/1"
               },
               {
                 "reference": "Observation/2"
+              }
+            ]
+          },
+          {
+            "title": "TB referral followup",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "185389009",
+                  "display": "Follow-up visit"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Observation/3"
+              },
+              {
+                "reference": "Observation/4"
               }
             ]
           }
@@ -207,6 +239,41 @@
       }
     },
     {
+      "fullUrl": "Encounter/1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "1",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Encounter"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://khushibaby.org",
+            "value": "Tuberculosis"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/3"
+          }
+        ],
+        "period": {
+          "start": "2023-06-08T16:00:00.123+05:30"
+        }
+      }
+    },
+    {
       "fullUrl": "Condition/1",
       "resource": {
         "id": "2",
@@ -275,6 +342,72 @@
       }
     },
     {
+      "fullUrl": "Condition/3",
+      "resource": {
+        "id": "3",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Bundle"
+          ]
+        },
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "171126009",
+              "display": "Tuberculosis screening"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/4",
+      "resource": {
+        "id": "4",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Bundle"
+          ]
+        },
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "224619008",
+              "display": "Migrant"
+            }
+          ]
+        }
+      }
+    },
+    {
       "fullUrl": "Observation/1",
       "resource": {
         "id": "1",
@@ -284,6 +417,7 @@
           ]
         },
         "resourceType": "Observation",
+        "status": "final",
         "code": {
           "coding": [
             {
@@ -315,6 +449,7 @@
           ]
         },
         "resourceType": "Observation",
+        "status": "final",
         "code": {
           "coding": [
             {
@@ -333,6 +468,70 @@
             }
           ],
           "text": "Current drinker"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/3",
+      "resource": {
+        "id": "3",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "248595008",
+              "display": "Sputum finding"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "275719008",
+              "display": "Sputum evidence of infection"
+            }
+          ],
+          "text": "Test result positive"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/4",
+      "resource": {
+        "id": "4",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Observation"
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "171229005",
+              "display": "Screening chest X-ray"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "707307002",
+              "display": "Tuberculosis screening chest X-ray abnormal"
+            }
+          ],
+          "text": "Test result positive"
         }
       }
     }
