@@ -377,9 +377,8 @@
           "coding": [
             {
               "system": "http://snomed.info/sct",
-              "code": "768040009",
-              // discuss
-              "display": "Rifampicin"
+              "code": "371651009",
+              "display": "Fluconazole 100 mg oral tablet"
             }
           ]
         },
@@ -407,9 +406,8 @@
                 "coding": [
                   {
                     "system": "http://snomed.info/sct",
-                    "code": "307450003",
-                    // discuss
-                    "display": "Once monthly"
+                    "code": "229797004",
+                    "display": "Once daily"
                   }
                 ]
               }
