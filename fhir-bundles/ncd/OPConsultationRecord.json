@@ -98,6 +98,44 @@
                 "reference": "Observation/2"
               }
             ]
+          },
+          {
+            "title": "Ncd assessment",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "",
+                  "display": "NCD assessment"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Condition/10"
+              },
+              {
+                "reference": "Condition/11"
+              },
+              {
+                "reference": "Condition/12"
+              },
+              {
+                "reference": "Condition/13"
+              },
+              {
+                "reference": "Observation/3"
+              },
+              {
+                "reference": "Observation/4"
+              },
+              {
+                "reference": "Observation/5"
+              },
+              {
+                "reference": "Observation/6"
+              }
+            ]
           }
         ],
         "encounter": {
@@ -485,6 +523,102 @@
       }
     },
     {
+      "fullUrl": "Condition/10",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "10",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition"
+          ]
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "161501007",
+              "display": "H/O: hypertension"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/11",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "11",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition"
+          ]
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "50219008",
+              "display": "Hoarse"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/12",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "12",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition"
+          ]
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "53430007",
+              "display": "Pain of breast"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Condition/13",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "13",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Condition"
+          ]
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "76742009",
+              "display": "Postmenopausal bleeding"
+            }
+          ]
+        }
+      }
+    },
+    {
       "fullUrl": "Observation/1",
       "resource": {
         "id": "1",
@@ -545,6 +679,154 @@
             }
           ],
           "text": "Current drinker"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationBodyMeasurement"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "pregnancy vital signs"
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "status": "final",
+        "performer": [
+          {
+            "reference": "Organization/1"
+          }
+        ],
+        "valueQuantity": {
+          "value": 60,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "4",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationBodyMeasurement"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "pregnancy vital signs"
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "status": "final",
+        "performer": [
+          {
+            "reference": "Organization/1"
+          }
+        ],
+        "valueQuantity": {
+          "value": 120,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationBodyMeasurement"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood Pressure"
+            }
+          ],
+          "text": "pregnancy vital signs"
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "status": "final",
+        "performer": [
+          {
+            "reference": "Organization/1"
+          }
+        ],
+        "valueQuantity": {
+          "value": 80,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "6",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/ObservationBodyMeasurement"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2339-0",
+              "display": "Glucose [Mass/volume] in Blood"
+            }
+          ],
+          "text": "pregnancy vital signs"
+        },
+        "subject": {
+          "reference": "Patient/1"
+        },
+        "status": "final",
+        "performer": [
+          {
+            "reference": "Organization/1"
+          }
+        ],
+        "valueQuantity": {
+          "value": 20,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
         }
       }
     }
